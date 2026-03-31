@@ -51,7 +51,7 @@ class rational:
         if autolong:
             self.denom = 10 ** len(commaparts[1])
         else:
-            self.denom = 10L ** len(commaparts[1])
+            self.denom = 10 ** len(commaparts[1])
         neg = len(commaparts[0]) and commaparts[0][0] == "-"
         if neg:
             commaparts[0] = commaparts[0][1:]
@@ -90,12 +90,12 @@ class rational:
                 if autolong:
                     self.denom *= 10 ** int(expparts[1])
                 else:
-                    self.denom *= 10L ** int(expparts[1])
+                    self.denom *= 10 ** int(expparts[1])
             else:
                 if autolong:
                     self.num *= 10 ** int(expparts[1])
                 else:
-                    self.num *= 10L ** int(expparts[1])
+                    self.num *= 10 ** int(expparts[1])
 
     def initfromfloat(self, x, floatprecision):
         "converts a float into a rational with finite resolution"
